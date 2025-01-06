@@ -6,6 +6,7 @@ import logging
 import subprocess
 from pathlib import Path
 from datetime import datetime
+import time
 from rich.progress import (
     Progress,
     SpinnerColumn,
@@ -126,6 +127,7 @@ class BatchMarkdownProcessor:
                 else:
                     failed += 1
                 progress.update(overall_task, advance=1)
+                time.sleep(15)
 
             # Print summary
             self.logger.info("\nProcessing Summary:")

@@ -73,9 +73,13 @@ def main():
 
         driver.implicitly_wait(10)
 
-        time.sleep(60)
+        input("Solve the CAPTCHA and press Enter...")
+        input("Set PDF to be downloaded instead of opening in new page and set download location, then press Enter...")
+
         while cnt <= 100:
-            time.sleep(random.uniform(30, 40))
+            time.sleep(random.uniform(10, 15))
+
+            print(f"Downloading research papers on page {cnt+1}")
 
             anchor_list = driver.find_elements(by=By.CSS_SELECTOR, value="a")
             next_page_list = driver.find_elements(by=By.CLASS_NAME, value="gs_nma")
