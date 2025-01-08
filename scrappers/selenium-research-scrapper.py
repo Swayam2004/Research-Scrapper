@@ -76,7 +76,7 @@ def main():
         cnt = 1
 
         # Direct URL
-        # url = "https://scholar.google.com/scholar?start=000&q=clean+cookstove&hl=en&as_sdt=0,5"
+        # url = "https://scholar.google.com/scholar?start=000&q=clean+cookstove&hl=en&as_sdt=0,5" 
 
         search_query = "clean cookstoves"
 
@@ -86,9 +86,7 @@ def main():
         driver.implicitly_wait(10)
         time.sleep(random.uniform(5, 7))
 
-        search_field = driver.find_element(by=By.ID, value="gs_hdr_tsi").send_keys(
-            search_query
-        )
+        driver.find_element(by=By.ID, value="gs_hdr_tsi").send_keys(search_query)
 
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(random.uniform(4, 5))
@@ -98,7 +96,7 @@ def main():
 
         input("Solve the CAPTCHA and press Enter...")
         input(
-            "Set PDF to be downloaded instead of opening in new page and set download location, then press Enter..."
+            "Set PDF to be downloaded instead of opening in new page and set download location, then press Enter..."  
         )
 
         while cnt <= 100:

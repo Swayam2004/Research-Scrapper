@@ -44,7 +44,7 @@ class BatchMarkdownConverter:
         try:
             # Create unique output filename with timestamp
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = self.output_dir / f"{md_path.stem}_{timestamp}.pdf"
+            output_path = self.output_dir / f"{md_path.stem}.pdf"
 
             task_id = progress.add_task(
                 f"[cyan]Converting {md_path.name}...", total=100
