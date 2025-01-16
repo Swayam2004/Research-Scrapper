@@ -45,28 +45,8 @@ To use the Research Scrapper, follow these steps:
     ```bash
     python main.py
     ```
-2. Follow the on-screen instructions to start scraping.
+2. Follow the on-screen instructions to *start* scraping.
 
-## Contributing
-We welcome contributions! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-branch
-    ```
-3. Make your changes and commit them:
-    ```bash
-    git commit -m "Description of your changes"
-    ```
-4. Push to the branch:
-    ```bash
-    git push origin feature-branch
-    ```
-5. Create a pull request.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 For any questions or suggestions, please contact us at [email@example.com](mailto:email@example.com).
