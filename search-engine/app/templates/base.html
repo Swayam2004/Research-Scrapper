@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Research Papers Search{% endblock %}</title>
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <main class="container">
+        <h1 class="page-title">{% block heading %}Research Papers Search{% endblock %}</h1>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <p>Built with FastAPI and Python | <a href="https://github.com/Swayam2004/Research-Scrapper">GitHub</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Search Results{% endblock %}
+{% block heading %}Search Results for "{{ query }}"{% endblock %}
+
+{% block content %}
+<div class="results-container">
+    <div class="results-header">
+        <h2>Found {{ total_results }} results</h2>
+        <a href="/" class="back-link">← New Search</a>
+    </div>
+
+    <div class="results-list">
+        {% for paper in results %}
+        <div class="paper-item">
+            <h3>{{ paper.name }}</h3>
+            <div class="result-score">Relevance Score: {{ "%.2f"|format(paper.score) }}</div>
+            <div class="paper-links">
+                <a href="/papers/{{ paper.name }}/{{ paper.pdf.name }}" target="_blank">Original Paper</a>
+                <a href="/papers/{{ paper.name }}/{{ paper.summary_md.name }}" target="_blank">Summary (MD)</a>
+                <a href="/papers/{{ paper.name }}/{{ paper.summary_pdf.name }}" target="_blank">Summary (PDF)</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -31,7 +31,7 @@ class FileAndFolderRenamer:
                 print(f"Error processing path {path}: {e}")
                 continue
 
-        print(paths)
+        # print(paths)
 
         for path in paths:
             try:

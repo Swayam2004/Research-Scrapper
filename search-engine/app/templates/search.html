@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block heading %}Research Paper Search Engine{% endblock %}
+{% block content %}
+<div class="search-container">
+    <p class="search-description">Search through <b>{{ papers|length }}</b> research papers on <b>clean cookstoves and related topics</b></p>
+    
+    <form id="searchForm" method="post" class="search-form">
+        <div class="search-box">
+            <input type="text" id="query" name="query" required placeholder="Enter keywords to search...">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var queryValue = document.getElementById("query").value;
+        window.location.href = "/results/" + encodeURIComponent(queryValue);
+    });
+</script>
+{% endblock %}

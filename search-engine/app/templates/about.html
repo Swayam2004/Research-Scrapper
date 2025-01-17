@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}About - Research Papers Search{% endblock %}
+{% block heading %}About This Project{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <section class="about-section">
+        <h2>Project Overview</h2>
+        <p>This search engine is designed to help researchers explore academic papers related to clean cookstoves and sustainable energy solutions. It uses BM25 ranking algorithm to provide relevant search results.</p>
+    </section>
+
+    <section class="about-section">
+        <h2>Features</h2>
+        <ul class="feature-list">
+            <li>Fast full-text search across research papers</li>
+            <li>BM25 ranking algorithm for accurate results</li>
+            <li>PDF and Markdown processing capabilities</li>
+            <li>Research paper organization tools</li>
+        </ul>
+    </section>
+
+    <section class="about-section">
+        <h2>Technologies Used</h2>
+        <ul class="tech-list">
+            <li>FastAPI for backend API</li>
+            <li>Python for text processing</li>
+            <li>BM25 for search ranking</li>
+            <li>HTML/CSS for frontend</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

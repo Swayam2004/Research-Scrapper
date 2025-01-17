@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Research Papers{% endblock %}
+{% block heading %}Available Research Papers{% endblock %}
+
+{% block content %}
+<div class="papers-container">
+    {% for paper in papers %}
+    <div class="paper-item">
+        <h3>{{ paper.name }}</h3>
+        <div class="paper-links">
+            <a href="/papers/{{ paper.name }}/{{ paper.pdf.name }}" target="_blank">Original Paper</a>
+            <a href="/papers/{{ paper.name }}/{{ paper.summary_md.name }}" target="_blank">Summary (MD)</a>
+            <a href="/papers/{{ paper.name }}/{{ paper.summary_pdf.name }}" target="_blank">Summary (PDF)</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
